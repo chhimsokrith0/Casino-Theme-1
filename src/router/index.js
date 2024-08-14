@@ -43,6 +43,7 @@ const routes = [
     name: 'My',
     component: MyProfile,
   },
+  
 ];
 
 const router = createRouter({
