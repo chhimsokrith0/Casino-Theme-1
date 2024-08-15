@@ -99,7 +99,7 @@
           </span>
         </div>
         <div class="mb-4 flex items-center">
-          <img src="../assets/icons/flag.png" alt="Country Code" class="w-6 h-6 mr-2 cursor-pointer" @click="toggleCountrySelection" />
+          <img src="../assets/icon-Language/Malaysia.jpg" alt="Country Code" class="w-6 h-6 mr-2 cursor-pointer" @click="toggleCountrySelection" />
           <input
             type="text"
             placeholder="Phone Number"
@@ -148,6 +148,8 @@
 </template>
 
 <script>
+import malaysia from '../assets/icon-Language/Malaysia.jpg'
+import hongkong from '../assets/icon-Language/HongKong.jpg'
 export default {
   data() {
     return {
@@ -157,10 +159,10 @@ export default {
       showCountryModal: false,
       selectedCountryCode: '+84',
       countries: [
-        { name: 'Malaysia', code: '+60', flag: '../assets/icons/flag-malaysia.png' },
-        { name: 'Hong Kong', code: '+852', flag: '../assets/icons/flag-hongkong.png' },
-        { name: 'Vietnam', code: '+84', flag: '../assets/icons/flag-vietnam.png' },
-        { name: 'Cambodia', code: '+855', flag: '../assets/icons/flag-cambodia.png' },
+        { name: 'Malaysia', code: '+60', flag: malaysia },
+        { name: 'Hong Kong', code: '+852', flag: hongkong },
+        { name: 'Vietnam', code: '+84', flag: hongkong },
+        { name: 'Cambodia', code: '+855', flag: hongkong },
         // Add more countries if needed
       ],
     };

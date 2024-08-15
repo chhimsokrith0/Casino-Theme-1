@@ -2,7 +2,7 @@
     <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-white max-w-sm mx-auto">
       <!-- Header -->
       <div class="flex items-center mb-4">
-        <img src="../assets/icons/license-icon.png" alt="License Icon" class="w-6 h-6 mr-2" />
+        <img src="" alt="License Icon" class="w-6 h-6 mr-2" />
         <h2 class="text-lg font-semibold">License</h2>
       </div>
   

@@ -23,13 +23,13 @@
         <!-- Responsible Gambling Section -->
         <div class="flex items-center space-x-4 mb-4 md:mb-0">
           <div class="flex items-center">
-            <img src="../assets/icons/responsible-gambling-icon.png" alt="Responsible Gambling" class="w-6 h-6 mr-2" />
+            <img src="" alt="Responsible Gambling" class="w-6 h-6 mr-2" />
             <h2 class="text-lg font-semibold">Responsible Gambling</h2>
           </div>
           <div class="flex space-x-3">
-            <img src="../assets/responsible-icons/18plus.png" alt="18+" class="w-8 h-8" />
-            <img src="../assets/responsible-icons/gamcare.png" alt="GamCare" class="w-8 h-8" />
-            <img src="../assets/responsible-icons/be-gamble-aware.png" alt="Be Gamble Aware" class="w-24 h-8" />
+            <img src="" alt="18+" class="w-8 h-8" />
+            <img src="" alt="GamCare" class="w-8 h-8" />
+            <img src="" alt="Be Gamble Aware" class="w-24 h-8" />
           </div>
         </div>
       </div>
