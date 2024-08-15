@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- Header Component -->
-    <Header />
+    <Header/>
+   
 
     <!-- Main Content - Router View -->
     <router-view />
@@ -20,6 +21,7 @@ import NavigationBottom from './components/NavigationBottom.vue';
 import ButtomChatService from './components/ButtomChatService.vue';
 
 export default {
+
   components: {
     Header,
     NavigationBottom,

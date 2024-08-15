@@ -8,7 +8,7 @@
       </svg>
       <!-- Scrolling Text -->
       <div class="absolute inset-0 flex items-center justify-start whitespace-nowrap animate-marquee">
-        <p class="ml-20 text-sm">
+        <p class="ml-12 text-sm">
           Please make sure your account is verified to be able to transfer money or play games. Other game center: PP88 - Your trusted platform for online gaming.
         </p>
       </div>
@@ -20,12 +20,12 @@
 
     <!-- Login and Register Buttons -->
     <ButtonLoginRegister/>
-    
+
     <!-- Button Group -->
     <div class="w-full mb-6 px-4">
       <ButtonGroup />
     </div>
-    
+
     <!-- Carousel -->
     <div class="w-full mb-6 px-4">
       <Carousel />
@@ -106,6 +106,6 @@ export default {
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 20s linear infinite; /* Adjusted timing for smoother scrolling */
 }
 </style>

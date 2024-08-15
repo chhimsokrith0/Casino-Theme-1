@@ -7,6 +7,7 @@ import Wallet from '../Views/Wallet.vue';
 import Promotion from '../Views/Promotion.vue';
 import MyProfile from '../Views/MyProfile.vue';
 import LoginRegister from '../components/LoginRegister.vue';
+import CustomerService from '../components/CustomerService.vue';
 
 const routes = [
   { 
@@ -40,7 +41,7 @@ const routes = [
     component: Promotion,
   },
   {
-    path: '/my',
+    path: '//my-profile',
     name: 'My',
     component: MyProfile,
   },
@@ -48,6 +49,11 @@ const routes = [
     path: '/loginregister',
     name: "LoginRegister",
     component: LoginRegister
+  },
+  {
+    path: '/customer-service',
+    name: "CustomerService",
+    component: CustomerService
   }
   
 ];
