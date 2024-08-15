@@ -1,9 +1,16 @@
 <template>
   <div>
+    <!-- Header Component -->
     <Header />
+
+    <!-- Main Content - Router View -->
     <router-view />
-    <NavigationBottom/>
-    <ButtomChatService/>
+
+    <!-- Navigation Bottom Component -->
+    <NavigationBottom />
+
+    <!-- Bottom Chat Service Component -->
+    <ButtomChatService />
   </div>
 </template>
 
@@ -11,11 +18,16 @@
 import Header from './components/Header.vue';
 import NavigationBottom from './components/NavigationBottom.vue';
 import ButtomChatService from './components/ButtomChatService.vue';
+
 export default {
   components: {
     Header,
     NavigationBottom,
-    ButtomChatService
+    ButtomChatService,
   },
 };
 </script>
+
+<style scoped>
+/* You can add global or scoped styles here if necessary */
+</style>

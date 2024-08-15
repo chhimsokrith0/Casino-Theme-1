@@ -19,14 +19,7 @@
     </div>
 
     <!-- Login and Register Buttons -->
-    <div class="flex space-x-4 w-full p-2">
-      <button class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded w-full">
-        Login
-      </button>
-      <button class="bg-purple-600 hover:bg-purple-500 text-white font-semibold py-2 px-6 rounded w-full">
-        Register
-      </button>
-    </div>
+    <ButtonLoginRegister/>
     
     <!-- Button Group -->
     <div class="w-full mb-6 px-4">
@@ -43,11 +36,28 @@
       <Casino />
     </div>
 
+    <!-- Broadcast Section -->
     <Broadcast/>
 
+    <!-- Reviews Section -->
     <Reviews/>
 
-    <br><br><br>
+    <!-- Brand Endorsement Section -->
+    <BrandEndorsement/>
+
+    <!-- Valencia Club Card Section -->
+    <ValenciaClubCard/>
+
+    <GameLicense/>
+
+    <License/>
+
+    <PaymentMethod/>
+
+    <Footer/>
+
+    <!-- Additional Spacing -->
+    <div class="mb-36"></div>
   </div>
 </template>
 
@@ -57,15 +67,29 @@ import Carousel from '../components/Carousel.vue';
 import Casino from '../components/Casino.vue';
 import Broadcast from '../components/Broadcast.vue';
 import Reviews from '../components/Reviews.vue';
+import BrandEndorsement from '../components/BrandEndorsement.vue';
+import ValenciaClubCard from '../components/ValenciaClubCard.vue';
+import GameLicense from '../components/GameLicense.vue';
+import License from '../components/License.vue';
+import PaymentMethod from '../components/PaymentMethod.vue';
+import Footer from '../components/Footer.vue';
+import ButtonLoginRegister from '../components/ButtonLoginRegister.vue';
 
 export default {
   name: 'Home',
   components: {
+    ButtonLoginRegister,
     ButtonGroup,
     Carousel,
     Casino,
     Broadcast,
-    Reviews
+    Reviews,
+    BrandEndorsement,
+    ValenciaClubCard,
+    GameLicense,
+    License,
+    PaymentMethod,
+    Footer
   },
 };
 </script>

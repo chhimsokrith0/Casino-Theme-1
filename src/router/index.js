@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '../Views/Home.vue';
 import About from '../views/About.vue';
 import Contact from '../views/Contact.vue';
 import EarnMoney from '../Views/EarnMoney.vue';
 import Wallet from '../Views/Wallet.vue';
 import Promotion from '../Views/Promotion.vue';
 import MyProfile from '../Views/MyProfile.vue';
+import LoginRegister from '../components/LoginRegister.vue';
 
 const routes = [
   { 
@@ -43,6 +44,11 @@ const routes = [
     name: 'My',
     component: MyProfile,
   },
+  {
+    path: '/loginregister',
+    name: "LoginRegister",
+    component: LoginRegister
+  }
   
 ];
 

@@ -1,7 +1,7 @@
 <template>
     <div>
       <!-- Floating Chat Bot Button -->
-      <div class="fixed bottom-4 right-4 mb-16">
+      <div class="fixed bottom-4 right-4 z-50 mb-16">
         <button
           @click="toggleChatbox"
           class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:opacity-90 transition duration-300 flex items-center justify-center animate-bounce"
