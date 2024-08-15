@@ -9,4 +9,9 @@ export default defineConfig({
       external: ['@fortawesome/fontawesome-free/css/all.min.css'],
     },
   },
+  resolve: {
+    alias: {
+      '@fortawesome/fontawesome-free': import.meta.resolve('@fortawesome/fontawesome-free/css/all.min.css'),
+    },
+  },
 })
