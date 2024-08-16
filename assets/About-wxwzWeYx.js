@@ -1,0 +1,1 @@
+import{_ as t,c as o,o as s,a as e}from"./index-d_ek8A_U.js";const c={},a={class:"container mx-auto mt-10"},n=e("h2",{class:"text-2xl font-bold"},"About Page",-1),_=e("p",null,"Learn more about us here.",-1),r=[n,_];function d(l,i){return s(),o("div",a,r)}const f=t(c,[["render",d]]);export{f as default};
