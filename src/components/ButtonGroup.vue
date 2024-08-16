@@ -1,30 +1,18 @@
 <template>
-  <div class="bg-gray-900 p-4 flex items-center overflow-x-auto w-full">
-    <!-- Scroll Left Button -->
-    <button @click="scrollLeft" class="bg-gray-800 text-white p-2 rounded-lg mr-2 flex-shrink-0">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-    
+  <div class="bg-gray-900 p-2 flex items-center overflow-x-auto w-full">
     <!-- Button Group with Horizontal Scroll -->
     <div ref="scrollContainer" class="flex space-x-2 overflow-x-auto scrollbar-hide w-full">
       <div v-for="(button, index) in buttons" :key="index" class="flex flex-col items-center flex-grow">
         <button 
           @click="setActive(index); navigateTo(button.route)"
-          :class="['p-2 sm:p-4 rounded-lg flex flex-col items-center justify-center space-y-2 w-full', isActive(index) ? 'bg-gray-700 text-yellow-400' : 'bg-gray-800 hover:bg-gray-700 text-white']">
-          <img :src="button.icon" :alt="button.label" class="w-8 h-8 sm:w-12 sm:h-12" />
-          <span :class="['text-xs sm:text-sm', isActive(index) ? 'text-yellow-400' : 'text-white']">{{ button.label }}</span>
+          :class="[
+            'p-2 sm:p-4 rounded-lg flex flex-col items-center justify-center space-y-2 w-full transition-transform duration-300 ease-in-out',
+            isActive(index) ? 'bg-gray-700 text-yellow-400 animate-bounce' : 'bg-gray-800 hover:bg-gray-700 text-white hover:scale-105']">
+          <img :src="button.icon" :alt="button.label" class="w-8 h-8 sm:w-12 sm:h-12 transition-transform duration-300 ease-in-out transform hover:scale-110" />
+          <span :class="['text-xs sm:text-sm transition-colors duration-300', isActive(index) ? 'text-yellow-400' : 'text-white']">{{ button.label }}</span>
         </button>
       </div>
     </div>
-  
-    <!-- Scroll Right Button -->
-    <button @click="scrollRight" class="bg-gray-800 text-white p-2 rounded-lg ml-2 flex-shrink-0">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
   </div>
 </template>
 
@@ -86,5 +74,27 @@ export default {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+/* Add bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.5s infinite;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.10);
 }
 </style>

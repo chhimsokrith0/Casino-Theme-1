@@ -1,14 +1,24 @@
 <template>
-  <nav class="bg-gray-900 p-4 z-50 fixed bottom-0 w-full flex justify-around items-center text-white shadow-lg">
+  <nav class="bg-gray-900 p-4 z-50 fixed bottom-0 w-full h-14 flex justify-around items-center text-white shadow-lg">
     <!-- Navigation Item -->
     <div 
       v-for="(item, index) in navItems" 
       :key="index" 
       @click="navigateTo(item.route)" 
-      class="flex flex-col items-center cursor-pointer"
+      class="flex flex-col items-center cursor-pointer transition-transform transform hover:scale-110"
     >
-      <img :src="item.icon" :alt="item.label" class="w-6 h-6 mb-1" />
-      <span :class="{'text-blue-500': item.active, 'text-gray-400': !item.active}" class="text-xs">
+      <img 
+        :src="item.icon" 
+        :alt="item.label" 
+        class="w-6 h-6 mb-1 transition-transform duration-300 ease-in-out"
+        :class="{'animate-bounce': item.active, 'scale-110': item.active}" 
+      />
+      <span 
+        :class="[
+          {'text-blue-500': item.active, 'text-gray-400': !item.active}, 
+          'text-xs transition-colors duration-300 ease-in-out'
+        ]"
+      >
         {{ item.label }}
       </span>
     </div>
@@ -50,12 +60,31 @@ export default {
 </script>
 
 <style scoped>
-/* Style for the active icon and label */
-.text-blue-500 {
-  color: #3b82f6; /* Tailwind's blue-500 color */
+/* Bounce animation for active icon */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.text-gray-400 {
-  color: #9ca3af; /* Tailwind's gray-400 color */
+.animate-bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
+/* Scale effect on hover */
+.transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure smooth color transitions for the text */
+.transition-colors {
+  transition: color 0.3s ease-in-out;
 }
 </style>
