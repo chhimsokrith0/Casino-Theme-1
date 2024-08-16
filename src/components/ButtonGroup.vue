@@ -10,9 +10,11 @@
     <!-- Button Group with Horizontal Scroll -->
     <div ref="scrollContainer" class="flex space-x-2 overflow-x-auto scrollbar-hide w-full">
       <div v-for="(button, index) in buttons" :key="index" class="flex flex-col items-center flex-grow">
-        <button class="bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded-lg flex flex-col items-center justify-center space-y-2 w-full">
+        <button 
+          @click="setActive(index); navigateTo(button.route)"
+          :class="['p-2 sm:p-4 rounded-lg flex flex-col items-center justify-center space-y-2 w-full', isActive(index) ? 'bg-gray-700 text-yellow-400' : 'bg-gray-800 hover:bg-gray-700 text-white']">
           <img :src="button.icon" :alt="button.label" class="w-8 h-8 sm:w-12 sm:h-12" />
-          <span class="text-white text-xs sm:text-sm">{{ button.label }}</span>
+          <span :class="['text-xs sm:text-sm', isActive(index) ? 'text-yellow-400' : 'text-white']">{{ button.label }}</span>
         </button>
       </div>
     </div>
@@ -35,13 +37,14 @@ export default {
   name: 'ButtonGroup',
   data() {
     return {
+      activeIndex: 0, // Track the active button index
       buttons: [
-        { label: 'Sports', icon: icon_slot },
-        { label: 'Casino', icon: icon_fishing },
-        { label: 'Slots', icon: icon_casino },
-        { label: 'Fishing', icon: icon_fishing },
-        { label: 'Chess', icon: icon_casino },
-        { label: 'Animal', icon: icon_casino },
+        { label: 'Sports', icon: icon_slot, route: '/sports' },
+        { label: 'Casino', icon: icon_fishing, route: '/casino' },
+        { label: 'Slots', icon: icon_casino, route: '/slots' },
+        { label: 'Fishing', icon: icon_fishing, route: '/fishing' },
+        { label: 'Chess', icon: icon_casino, route: '/chess' },
+        { label: 'Animal', icon: icon_casino, route: '/animal' },
       ],
     };
   },
@@ -51,6 +54,15 @@ export default {
     },
     scrollRight() {
       this.$refs.scrollContainer.scrollBy({ left: 150, behavior: 'smooth' });
+    },
+    navigateTo(route) {
+      this.$router.push(route);
+    },
+    setActive(index) {
+      this.activeIndex = index;
+    },
+    isActive(index) {
+      return this.activeIndex === index;
     },
   },
 };
