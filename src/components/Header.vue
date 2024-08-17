@@ -27,7 +27,7 @@
       <div v-if="drawerOpen && !languageDrawerOpen" class="fixed top-14 left-0 h-full w-64 bg-gray-800 text-white z-50">
         <div class="p-4">
           <div class="p-4 bg-gray-900 rounded-lg mb-4">
-            <h2 class="text-lg font-bold mb-2">Hi, welcome to ICG casino</h2>
+            <h2 class="text-lg font-bold mb-2">{{ $t('welcomeMessage') }}</h2>
             <div class="flex flex-col space-y-2">
               <div class="flex items-center space-x-2">
                 <img src="../assets/Club.png" alt="Valencia Club" class="w-8 h-8 rounded-full" />
@@ -42,32 +42,32 @@
           <ul class="space-y-2">
             <li @click="openLanguageDrawer" class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/Language.png" alt="Language" class="w-6 h-6 mr-2" />
-              <span>Language</span>
+              <span>{{ $t('language') }}</span>
               <span class="ml-auto">></span>
             </li>
             <li class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/messagecenter.png" alt="Message Center" class="w-6 h-6 mr-2" />
-              <span>Message Center</span>
+              <span>{{ $t('messageCenter') }}</span>
               <span class="ml-auto">></span>
             </li>
             <li @click="navigateToCustomerService" class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/Feedback.png" alt="Feedback" class="w-6 h-6 mr-2" />
-              <span>Feedback</span>
+              <span>{{ $t('feedback') }}</span>
               <span class="ml-auto">></span>
             </li>
             <li class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/app.png" alt="APP" class="w-6 h-6 mr-2" />
-              <span>APP</span>
+              <span>{{ $t('app') }}</span>
               <span class="ml-auto">></span>
             </li>
             <li class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/About.png" alt="About" class="w-6 h-6 mr-2" />
-              <span>About</span>
+              <span>{{ $t('about') }}</span>
               <span class="ml-auto">></span>
             </li>
             <li class="flex items-center py-2 px-4 rounded-lg bg-gray-900 hover:bg-gray-700 cursor-pointer">
               <img src="../assets/icon-Drawer/Device.png" alt="Device" class="w-6 h-6 mr-2" />
-              <span>Device</span>
+              <span>{{ $t('device') }}</span>
               <span class="ml-auto">></span>
             </li>
           </ul>
@@ -80,7 +80,7 @@
       <div v-if="languageDrawerOpen" class="fixed top-14 left-0 h-full w-64 bg-gray-800 text-white z-50">
         <div class="p-4 bg-gray-900 rounded-lg">
           <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-bold">Language</h2>
+            <h2 class="text-lg font-bold">{{ $t('language') }}</h2>
             <button @click="closeLanguageDrawer" class="text-white">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -88,25 +88,25 @@
             </button>
           </div>
           <ul class="space-y-4">
-            <li class="flex items-center">
+            <li @click="changeLanguage('en')" class="flex items-center cursor-pointer">
               <img src="../assets/icon-Language/Malaysia.jpg" alt="Malaysia" class="w-6 h-6 mr-2" />
               <div>
-                <span class="block text-white">Malaysia</span>
-                <span class="text-gray-400 text-sm">English | 简体中文 | Malay</span>
+                <span class="block text-white">{{ $t('malaysia') }}</span>
+                <span class="text-gray-400 text-sm">{{ $t('english') }} | {{ $t('simplifiedChinese') }} | {{ $t('malay') }}</span>
               </div>
             </li>
-            <li class="flex items-center">
+            <li @click="changeLanguage('zh')" class="flex items-center cursor-pointer">
               <img src="../assets/icon-Language/HongKong.jpg" alt="Hong Kong" class="w-6 h-6 mr-2" />
               <div>
-                <span class="block text-white">香港</span>
-                <span class="text-gray-400 text-sm">繁体中文</span>
+                <span class="block text-white">{{ $t('hongKong') }}</span>
+                <span class="text-gray-400 text-sm">{{ $t('traditionalChinese') }}</span>
               </div>
             </li>
-            <li class="flex items-center">
+            <li @click="changeLanguage('vi')" class="flex items-center cursor-pointer">
               <img src="../assets/icon-Language/vietnam.jpg" alt="Vietnam" class="w-6 h-6 mr-2" />
               <div>
-                <span class="block text-white">Việt Nam</span>
-                <span class="text-gray-400 text-sm">Tiếng Việt</span>
+                <span class="block text-white">{{ $t('vietnam') }}</span>
+                <span class="text-gray-400 text-sm">{{ $t('vietnamese') }}</span>
               </div>
             </li>
           </ul>
@@ -136,6 +136,10 @@ export default {
     closeLanguageDrawer() {
       this.languageDrawerOpen = false; // Close language drawer
       this.drawerOpen = true; // Reopen the main drawer when the language drawer is closed
+    },
+    changeLanguage(lang) {
+      this.$i18n.locale = lang; // Change the language
+      this.closeLanguageDrawer(); // Close the language drawer after selection
     },
     navigateToCustomerService() {
       this.$router.push('/customer-service'); // Navigate to CustomerService page

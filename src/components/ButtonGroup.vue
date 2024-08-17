@@ -9,7 +9,7 @@
             'p-2 sm:p-4 rounded-lg flex flex-col items-center justify-center space-y-2 w-full transition-transform duration-300 ease-in-out',
             isActive(index) ? 'bg-gray-700 text-yellow-400 animate-bounce' : 'bg-gray-800 hover:bg-gray-700 text-white hover:scale-105']">
           <img :src="button.icon" :alt="button.label" class="w-8 h-8 sm:w-12 sm:h-12 transition-transform duration-300 ease-in-out transform hover:scale-110" />
-          <span :class="['text-xs sm:text-sm transition-colors duration-300', isActive(index) ? 'text-yellow-400' : 'text-white']">{{ button.label }}</span>
+          <span :class="['text-xs sm:text-sm transition-colors duration-300', isActive(index) ? 'text-yellow-400' : 'text-white']">{{ $t(button.label) }}</span>
         </button>
       </div>
     </div>

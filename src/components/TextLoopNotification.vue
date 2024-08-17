@@ -7,7 +7,7 @@
     <!-- Scrolling Text -->
     <div class="absolute inset-0 flex items-center justify-start whitespace-nowrap animate-marquee">
       <p class="ml-12 text-sm">
-        Please make sure your account is verified to be able to transfer money or play games. Other game center: PP88 - Your trusted platform for online gaming.
+        {{ $t('TextLoop') }}
       </p>
     </div>
     <!-- Mail Icon -->

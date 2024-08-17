@@ -19,7 +19,7 @@
           'text-xs transition-colors duration-300 ease-in-out'
         ]"
       >
-        {{ item.label }}
+        {{ $t(item.label) }}
       </span>
     </div>
   </nav>
@@ -38,7 +38,7 @@ export default {
     return {
       navItems: [
         { label: 'Home', icon: iconHome, route: '/', active: true },
-        { label: 'Earn Money', icon: iconEarnMoney, route: '/earn-money', active: false },
+        { label: 'EarnMoney', icon: iconEarnMoney, route: '/earn-money', active: false },
         { label: 'Wallet', icon: iconWallet, route: '/wallet', active: false },
         { label: 'Promotion', icon: iconPromotion, route: '/promotion', active: false },
         { label: 'My', icon: iconMy, route: '/my-profile', active: false },

@@ -2,7 +2,7 @@
     <div class="bg-gray-900 min-h-screen p-6 text-white">
       <!-- Header Section -->
       <div class="flex items-center mb-6">
-        <span class="text-2xl font-bold mr-2">👍 Hot</span>
+        <span class="text-2xl font-bold mr-2">👍 {{$t('Hot')}}</span>
       </div>
   
       <!-- Casino Games Grid -->
