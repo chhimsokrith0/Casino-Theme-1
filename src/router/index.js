@@ -13,6 +13,7 @@ import SlotsPage from '../components/PageButtonGroup/SlotsPage.vue';
 import FishingPage from '../components/PageButtonGroup/FishingPage.vue';
 import ChessPage from '../components/PageButtonGroup/ChessPage.vue';
 import AnimalPage from '../components/PageButtonGroup/AnimalPage.vue';
+import fishMas_yl from '../components/PageButtonGroup/PageFishing/fish-mas_yl.vue';
 
 
 const routes = [
@@ -90,6 +91,11 @@ const routes = [
     path: '/animal',
     name: "Animal",
     component: AnimalPage
+  },
+  {
+    path: '/fishing-game-1',
+    name: "FishMasyl",
+    component: fishMas_yl
   }
   
 ];

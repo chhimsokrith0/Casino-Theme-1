@@ -3,6 +3,7 @@
       <TextLoopNotification />
       <ButtonLoginRegister />
       <ButtonGroup />
+      
       <div class="bg-gray-900 text-white sm:p-8 w-full">
         <div class="px-4 py-6 sm:px-8 w-full">
           <div class="grid grid-cols-3 sm:grid-cols-3 gap-4">
@@ -30,6 +31,7 @@
     import ButtonGroup from '../ButtonGroup.vue';
     import ButtonLoginRegister from '../ButtonLoginRegister.vue';
     import TextLoopNotification from '../TextLoopNotification.vue';
+  
     
     import slot1 from '../../assets/banner-slots/1hot.webp';
     import slot2 from '../../assets/banner-slots/2jili.webp';
@@ -75,6 +77,7 @@
   </script>
   
   <style scoped>
+    
     .hover\:scale-105:hover {
       transform: scale(1.05);
     }
