@@ -4,6 +4,7 @@ import App from './App.vue'
 import './assets/tailwind.css';
 import router from './router';
 import i18n from './i18n';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 createApp(App)

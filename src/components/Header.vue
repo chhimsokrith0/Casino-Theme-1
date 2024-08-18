@@ -9,7 +9,7 @@
           </svg>
         </div>
         <!-- Brand Name -->
-        <div class="text-white font-bold text-xl flex items-center">
+        <div @click="navigateToHome" class="text-white font-bold text-xl flex items-center">
           <span class="text-yellow-500">ICG </span> Gaming
         </div>
       </div>
@@ -143,6 +143,9 @@ export default {
     },
     navigateToCustomerService() {
       this.$router.push('/customer-service'); // Navigate to CustomerService page
+    },
+    navigateToHome() {
+      this.$router.push('/'); // Navigate to Home page
     },
   },
 };

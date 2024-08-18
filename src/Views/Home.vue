@@ -3,6 +3,8 @@
     <!-- Notification Area with Text Loop -->
     <TextLoopNotification/>
 
+    <BalanceActions/>
+
     <!-- Login and Register Buttons -->
     <ButtonLoginRegister/>
 
@@ -60,6 +62,7 @@ import PaymentMethod from '../components/PaymentMethod.vue';
 import Footer from '../components/Footer.vue';
 import ButtonLoginRegister from '../components/ButtonLoginRegister.vue';
 import TextLoopNotification from '../components/TextLoopNotification.vue';
+import BalanceActions from '../components/BalanceActions.vue';
 
 export default {
   name: 'Home',
@@ -76,7 +79,8 @@ export default {
     License,
     PaymentMethod,
     Footer,
-    TextLoopNotification
+    TextLoopNotification,
+    BalanceActions
   },
 };
 </script>
