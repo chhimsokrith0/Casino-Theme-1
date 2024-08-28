@@ -17,9 +17,13 @@
 </template>
 
 <script>
-import icon_slot from '../assets/icon-buttongroup/Slots.png';
-import icon_fishing from '../assets/icon-buttongroup/Fishing.png';
-import icon_casino from '../assets/icon-buttongroup/Casino.png';
+import icon_Sports from '../assets/icon-buttongroup/Sports.png' 
+import icon_slot from '../assets/icon-buttongroup/slot.png';
+import icon_fishing from '../assets/icon-buttongroup/Fish.png';
+import icon_casino from '../assets/icon-buttongroup/casino.png';
+import icon_chess from '../assets/icon-buttongroup/chess.png'
+import icon_animal from '../assets/icon-buttongroup/animal.png'
+import icon_lottery from '../assets/icon-buttongroup/lottery.png'
 
 export default {
   name: 'ButtonGroup',
@@ -27,12 +31,13 @@ export default {
     return {
       activeIndex: 0, // Track the active button index
       buttons: [
-        { label: 'Sports', icon: icon_slot, route: '/sports' },
-        { label: 'Casino', icon: icon_fishing, route: '/casino' },
-        { label: 'Slots', icon: icon_casino, route: '/slots' },
+        { label: 'Sports', icon: icon_Sports, route: '/sports' },
+        { label: 'Casino', icon: icon_casino, route: '/casino' },
+        { label: 'Slots', icon: icon_slot, route: '/slots' },
         { label: 'Fishing', icon: icon_fishing, route: '/fishing' },
-        { label: 'Chess', icon: icon_casino, route: '/chess' },
-        { label: 'Animal', icon: icon_casino, route: '/animal' },
+        { label: 'Chess', icon: icon_chess, route: '/chess' },
+        { label: 'Animal', icon: icon_animal, route: '/animal' },
+        { label: 'Lottery', icon: icon_lottery, route: '/lottery' },
       ],
     };
   },

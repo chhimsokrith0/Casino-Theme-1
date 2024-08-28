@@ -3,7 +3,9 @@
     <!-- Notification Area with Text Loop -->
     <TextLoopNotification/>
 
-    <BalanceActions/>
+    <div class="p-1">
+      <BalanceActions/>
+    </div>
 
     <!-- Login and Register Buttons -->
     <ButtonLoginRegister/>
